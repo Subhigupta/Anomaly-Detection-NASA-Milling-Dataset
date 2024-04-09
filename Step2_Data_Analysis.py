@@ -81,7 +81,7 @@ def VB_plot(mill_data,fields):
     plt.plot(VB_array,'o')
     plt.ylabel('VB measured for all experimental runs')
     plt.xlabel('Number of experiments conducted')
-    plt.savefig("VB_for_all_plots")
+    plt.savefig(os.path.join("Plots_for_VB_data","VB_for_all_plots"))
 
     return data
 
