@@ -5,8 +5,6 @@ from scipy.stats import skew, kurtosis
 from scipy.fft import fft
 from scipy.signal import welch
 
-
-
 def frequency_features(signal):
     # Assuming 'signal' contains the vibration data
     # Assuming 'nperseg' is the length of each segment
@@ -134,9 +132,9 @@ def main_features_extraction():
     features_dict=vib_array(mill_data,indexes_case1,indexes_case13)
 
     extracted_features_dict={'case1_vib_table_features':features_dict['case1']['case1_vib_table'], 
-                'case1_spindle_table_features':features_dict['case1']['case1_vib_spindle'],
+                'case1_vib_spindle_features':features_dict['case1']['case1_vib_spindle'],
                 'case13_vib_table_features':features_dict['case13']['case13_vib_table'],
-                'case13_spindle_table_features':features_dict['case13']['case13_vib_spindle']}
+                'case13_vib_spindle_features':features_dict['case13']['case13_vib_spindle']}
     extracted_features_data=pd.DataFrame(extracted_features_dict)
     print(extracted_features_data)
 
